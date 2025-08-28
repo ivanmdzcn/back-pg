@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\05-PROYECTO-II\\BACK\\API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\servicios\\causante\\causanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\interfaces\\causante\\icausanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\causante\\causanteresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\causante\\causanterequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\controllers\\causante\\causantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:controllers\\causante\\causantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65A89728-03FE-4778-8D3F-EB20C6C152B2}|..\\AccesoDatos\\AccesoDatos.csproj|d:\\05-proyecto-ii\\back\\accesodatos\\causante\\causantedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CausanteService.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Causante\\CausanteService.cs",
+              "RelativeDocumentMoniker": "..\\Servicios\\Servicios\\Causante\\CausanteService.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Causante\\CausanteService.cs",
+              "RelativeToolTip": "..\\Servicios\\Servicios\\Causante\\CausanteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T02:39:16.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICausanteService.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Causante\\ICausanteService.cs",
+              "RelativeDocumentMoniker": "..\\Servicios\\Interfaces\\Causante\\ICausanteService.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Causante\\ICausanteService.cs",
+              "RelativeToolTip": "..\\Servicios\\Interfaces\\Causante\\ICausanteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T02:38:49.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CausanteController.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Causante\\CausanteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Causante\\CausanteController.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Causante\\CausanteController.cs",
+              "RelativeToolTip": "Controllers\\Causante\\CausanteController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T01:29:42.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CausanteDao.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Causante\\CausanteDao.cs",
+              "RelativeDocumentMoniker": "..\\AccesoDatos\\Causante\\CausanteDao.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Causante\\CausanteDao.cs",
+              "RelativeToolTip": "..\\AccesoDatos\\Causante\\CausanteDao.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAcwEMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T01:29:07.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CausanteResponseDto.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Causante\\CausanteResponseDto.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Causante\\CausanteResponseDto.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Causante\\CausanteResponseDto.cs",
+              "RelativeToolTip": "..\\Dominio\\DTO\\Causante\\CausanteResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T01:27:22.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CausanteRequestDto.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Causante\\CausanteRequestDto.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Causante\\CausanteRequestDto.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Causante\\CausanteRequestDto.cs",
+              "RelativeToolTip": "..\\Dominio\\DTO\\Causante\\CausanteRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T01:27:10.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T05:13:11.321Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

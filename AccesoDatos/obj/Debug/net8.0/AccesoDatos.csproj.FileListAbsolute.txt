@@ -1,0 +1,15 @@
+D:\05-PROYECTO-II\BACK\AccesoDatos\bin\Debug\net8.0\AccesoDatos.deps.json
+D:\05-PROYECTO-II\BACK\AccesoDatos\bin\Debug\net8.0\AccesoDatos.dll
+D:\05-PROYECTO-II\BACK\AccesoDatos\bin\Debug\net8.0\AccesoDatos.pdb
+D:\05-PROYECTO-II\BACK\AccesoDatos\bin\Debug\net8.0\Dominio.dll
+D:\05-PROYECTO-II\BACK\AccesoDatos\bin\Debug\net8.0\Dominio.pdb
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.csproj.AssemblyReference.cache
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.AssemblyInfoInputs.cache
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.AssemblyInfo.cs
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.csproj.CoreCompileInputs.cache
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDa.B2719C34.Up2Date
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.dll
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\refint\AccesoDatos.dll
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.pdb
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\ref\AccesoDatos.dll

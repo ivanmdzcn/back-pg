@@ -1,0 +1,17 @@
+D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\Servicios.deps.json
+D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\Servicios.dll
+D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\Servicios.pdb
+D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\Dominio.dll
+D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\Dominio.pdb
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.csproj.AssemblyReference.cache
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.GeneratedMSBuildEditorConfig.editorconfig
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfoInputs.cache
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfo.cs
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.csproj.CoreCompileInputs.cache
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.csproj.Up2Date
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.dll
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\refint\Servicios.dll
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.pdb
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\ref\Servicios.dll
+D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\AccesoDatos.dll
+D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\AccesoDatos.pdb
