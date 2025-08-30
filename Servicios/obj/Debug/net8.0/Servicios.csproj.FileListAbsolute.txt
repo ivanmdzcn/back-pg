@@ -15,3 +15,4 @@ D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.pdb
 D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\ref\Servicios.dll
 D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\AccesoDatos.dll
 D:\05-PROYECTO-II\BACK\Servicios\bin\Debug\net8.0\AccesoDatos.pdb
+D:\05-PROYECTO-II\BACK\Servicios\obj\Debug\net8.0\Servicios.sourcelink.json

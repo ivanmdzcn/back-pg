@@ -64,8 +64,11 @@ namespace Servicios.Servicios.Login
                 {
                     Subject = new ClaimsIdentity(new[]
                     {
-                        new Claim(ClaimTypes.Name, usuario),
-                        new Claim(ClaimTypes.Role, rolNombre)
+                        new Claim(ClaimTypes.Name, usuario),                    // name (ASP.NET)
+                        new Claim(JwtRegisteredClaimNames.UniqueName, usuario), // unique_name (estándar)
+                        new Claim("usuario", usuario),                          // custom corto para el front
+                        new Claim(ClaimTypes.Role, rolNombre)                   // rol por nombre (p.ej. Administrador)
+
                     }),
                     Expires = DateTime.UtcNow.AddHours(1),
                     Issuer = issuer,

@@ -248,7 +248,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "Ingrese el token JWT en el campo: **Bearer &lt;token&gt;**",
+        "description": "Ingrese el token JWT en el campo: **Bearer {token}**",
         "scheme": "Bearer",
         "bearerFormat": "JWT"
       }
