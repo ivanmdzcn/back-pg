@@ -73,3 +73,4 @@ D:\05-PROYECTO-II\BACK\API\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\05-PROYECTO-II\BACK\API\bin\Debug\net8.0\System.Text.Json.dll
 D:\05-PROYECTO-II\BACK\API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\05-PROYECTO-II\BACK\API\obj\Debug\net8.0\API.sourcelink.json
+D:\05-PROYECTO-II\BACK\API\bin\Debug\net8.0\appsettings.Production.json
