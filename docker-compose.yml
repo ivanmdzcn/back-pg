@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    container_name: api-container
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__OracleConnection=User Id=APPUSER;Password=AppPass123;Data Source=oracle-xe:1521/xepdb1;
+      - ASPNETCORE_URLS=http://+:8080
+      # 🆕 AGREGADO: Variables CORS para Docker
+      - CORS__AllowedOrigins__0=http://localhost:4200
+      - CORS__AllowedOrigins__1=https://localhost:4200
+      - CORS__AllowedOrigins__2=http://192.168.1.24:4200
+    networks:
+      - igss-network
+    restart: unless-stopped
+    # 🆕 AGREGADO: Healthcheck
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health", "||", "exit", "1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  igss-network:
+    external: true
+    name: igss-network
