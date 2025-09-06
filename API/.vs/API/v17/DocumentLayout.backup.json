@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "D:\\05-PROYECTO-II\\BACK\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\controllers\\usuario\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:controllers\\usuario\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65A89728-03FE-4778-8D3F-EB20C6C152B2}|..\\AccesoDatos\\AccesoDatos.csproj|d:\\05-proyecto-ii\\back\\accesodatos\\usuario\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\controllers\\login\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:controllers\\login\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\usuario\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\interfaces\\login\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\controllers\\healthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:controllers\\healthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65A89728-03FE-4778-8D3F-EB20C6C152B2}|..\\AccesoDatos\\AccesoDatos.csproj|d:\\05-proyecto-ii\\back\\accesodatos\\conexion\\conexionoracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +46,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Login\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Login\\LoginController.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Login\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\Login\\LoginController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T19:50:24.141Z",
+              "WhenOpened": "2025-09-05T08:09:29.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HealthController.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\HealthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HealthController.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\HealthController.cs",
+              "RelativeToolTip": "Controllers\\HealthController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T08:03:12.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T07:36:24.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Usuario\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Usuario\\UsuarioController.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Usuario\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\Usuario\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T07:29:59.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConexionOracle.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Conexion\\ConexionOracle.cs",
+              "RelativeDocumentMoniker": "..\\AccesoDatos\\Conexion\\ConexionOracle.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Conexion\\ConexionOracle.cs",
+              "RelativeToolTip": "..\\AccesoDatos\\Conexion\\ConexionOracle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T07:24:15.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ILoginService.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Login\\ILoginService.cs",
+              "RelativeDocumentMoniker": "..\\Servicios\\Interfaces\\Login\\ILoginService.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Login\\ILoginService.cs",
+              "RelativeToolTip": "..\\Servicios\\Interfaces\\Login\\ILoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T07:24:59.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioDao.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Usuario\\UsuarioDao.cs",
+              "RelativeDocumentMoniker": "..\\AccesoDatos\\Usuario\\UsuarioDao.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Usuario\\UsuarioDao.cs",
+              "RelativeToolTip": "..\\AccesoDatos\\Usuario\\UsuarioDao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T07:24:49.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioDto.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Usuario\\UsuarioDto.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Usuario\\UsuarioDto.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Usuario\\UsuarioDto.cs",
+              "RelativeToolTip": "..\\Dominio\\DTO\\Usuario\\UsuarioDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T07:57:10.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-02T05:38:28.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-02T05:35:07.21Z",
               "EditorCaption": ""
             }
           ]

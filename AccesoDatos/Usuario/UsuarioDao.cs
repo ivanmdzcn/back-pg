@@ -8,9 +8,9 @@ namespace AccesoDatos.Usuario
     {
         private readonly ConexionOracle _conexion;
 
-        public UsuarioDao(IConfiguration configuration)
+        public UsuarioDao(ConexionOracle conexion)  
         {
-            _conexion = new ConexionOracle(configuration);
+            _conexion = conexion;
         }
 
         public List<UsuarioDto> ObtenerUsuarios()

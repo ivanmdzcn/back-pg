@@ -1,4 +1,5 @@
-﻿using Dominio.DTO.Causante;
+﻿using AccesoDatos.Conexion;
+using Dominio.DTO.Causante;
 using Microsoft.Extensions.Configuration;
 using Oracle.ManagedDataAccess.Client;
 
@@ -6,11 +7,17 @@ namespace AccesoDatos.Causante
 {
     public class CausanteDao
     {
-        private readonly Conexion.ConexionOracle _conexion;
+        //private readonly Conexion.ConexionOracle _conexion;
+        private readonly ConexionOracle _conexion;
 
-        public CausanteDao()
+        //public CausanteDao()
+        //{
+        //    _conexion = new Conexion.ConexionOracle(new ConfigurationBuilder().AddJsonFile("appsettings.json").Build());
+        //}
+
+        public CausanteDao(ConexionOracle conexion)   // 👈 DI te lo entrega ya configurado
         {
-            _conexion = new Conexion.ConexionOracle(new ConfigurationBuilder().AddJsonFile("appsettings.json").Build());
+            _conexion = conexion;
         }
 
         //Inbsertar 

@@ -8,9 +8,9 @@ namespace Servicios.Servicios.Causante
     {
         private readonly CausanteDao _dao;
 
-        public CausanteService()
+        public CausanteService(CausanteDao dao)
         {
-            _dao = new CausanteDao();
+            _dao = dao;
         }
 
         //Insertar

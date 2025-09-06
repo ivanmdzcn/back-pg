@@ -7,6 +7,8 @@ using Servicios.Interfaces.Login;
 using Servicios.Servicios.Causante;
 using Servicios.Servicios.Login;
 using System.Text;
+using AccesoDatos.Causante;   // 👈 para registrar CausanteDao
+
 
 namespace API
 {
@@ -28,8 +30,10 @@ namespace API
             // Repositorios y servicios
             services.AddScoped<UsuarioDao>();
             services.AddScoped<ILoginService, LoginService>();
-            services.AddSingleton<IConfiguration>(Configuration);
+
+            //services.AddSingleton<IConfiguration>(Configuration);
             services.AddTransient<ConexionOracle>();
+            services.AddScoped<CausanteDao>();
             services.AddScoped<ICausanteService, CausanteService>();
 
             services.AddControllers();

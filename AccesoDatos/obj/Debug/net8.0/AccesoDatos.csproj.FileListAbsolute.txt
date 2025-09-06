@@ -13,3 +13,4 @@ D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.dll
 D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\refint\AccesoDatos.dll
 D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.pdb
 D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\ref\AccesoDatos.dll
+D:\05-PROYECTO-II\BACK\AccesoDatos\obj\Debug\net8.0\AccesoDatos.sourcelink.json
