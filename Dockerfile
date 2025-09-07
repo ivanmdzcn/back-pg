@@ -33,11 +33,11 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-# 🆕 AGREGADO: Variables de entorno por defecto
-ENV ASPNETCORE_ENVIRONMENT=Production
+# AGREGADO: Variables de entorno por defecto
+# ENV ASPNETCORE_ENVIRONMENT=Production
 ENV ASPNETCORE_URLS=http://+:8080
 
-# 🆕 AGREGADO: Crear usuario no-root por seguridad
+# AGREGADO: Crear usuario no-root por seguridad
 RUN adduser --disabled-password --gecos '' apiuser && chown -R apiuser /app
 USER apiuser
 
