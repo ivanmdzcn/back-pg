@@ -5,6 +5,211 @@
     "version": "v1.0"
   },
   "paths": {
+    "/api/Beneficiario": {
+      "get": {
+        "tags": [
+          "Beneficiario"
+        ],
+        "parameters": [
+          {
+            "name": "causanteId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BeneficiarioResponseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BeneficiarioResponseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BeneficiarioResponseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Beneficiario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BeneficiarioRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BeneficiarioRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BeneficiarioRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficiario/{bencau}/{bencod}": {
+      "get": {
+        "tags": [
+          "Beneficiario"
+        ],
+        "parameters": [
+          {
+            "name": "bencau",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "bencod",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BeneficiarioEditDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BeneficiarioEditDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BeneficiarioEditDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Beneficiario"
+        ],
+        "parameters": [
+          {
+            "name": "bencau",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "bencod",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BeneficiarioEditDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BeneficiarioEditDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BeneficiarioEditDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Beneficiario"
+        ],
+        "parameters": [
+          {
+            "name": "bencau",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "bencod",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Causante": {
       "post": {
         "tags": [
@@ -38,6 +243,15 @@
       "get": {
         "tags": [
           "Causante"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -212,6 +426,222 @@
   },
   "components": {
     "schemas": {
+      "BeneficiarioEditDto": {
+        "type": "object",
+        "properties": {
+          "bencau": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bencod": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "benno1": {
+            "type": "string",
+            "nullable": true
+          },
+          "benno2": {
+            "type": "string",
+            "nullable": true
+          },
+          "benap1": {
+            "type": "string",
+            "nullable": true
+          },
+          "benap2": {
+            "type": "string",
+            "nullable": true
+          },
+          "benres": {
+            "type": "string",
+            "nullable": true
+          },
+          "bendpi": {
+            "type": "string",
+            "nullable": true
+          },
+          "benpar": {
+            "type": "string",
+            "nullable": true
+          },
+          "benmon": {
+            "type": "number",
+            "format": "double"
+          },
+          "bensit": {
+            "type": "string",
+            "nullable": true
+          },
+          "bentrm": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "benate": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "benudg": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BeneficiarioRequestDto": {
+        "type": "object",
+        "properties": {
+          "bencau": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bencod": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "benno1": {
+            "type": "string",
+            "nullable": true
+          },
+          "benno2": {
+            "type": "string",
+            "nullable": true
+          },
+          "benap1": {
+            "type": "string",
+            "nullable": true
+          },
+          "benap2": {
+            "type": "string",
+            "nullable": true
+          },
+          "benres": {
+            "type": "string",
+            "nullable": true
+          },
+          "bendpi": {
+            "type": "string",
+            "nullable": true
+          },
+          "benpar": {
+            "type": "string",
+            "nullable": true
+          },
+          "benmon": {
+            "type": "number",
+            "format": "double"
+          },
+          "bensit": {
+            "type": "string",
+            "nullable": true
+          },
+          "bentrm": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "benate": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "benudg": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BeneficiarioResponseDto": {
+        "type": "object",
+        "properties": {
+          "bencau": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bencod": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "benno1": {
+            "type": "string",
+            "nullable": true
+          },
+          "benno2": {
+            "type": "string",
+            "nullable": true
+          },
+          "benap1": {
+            "type": "string",
+            "nullable": true
+          },
+          "benap2": {
+            "type": "string",
+            "nullable": true
+          },
+          "bennoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "benres": {
+            "type": "string",
+            "nullable": true
+          },
+          "bendpi": {
+            "type": "string",
+            "nullable": true
+          },
+          "benpar": {
+            "type": "string",
+            "nullable": true
+          },
+          "benmon": {
+            "type": "number",
+            "format": "double"
+          },
+          "bensit": {
+            "type": "string",
+            "nullable": true
+          },
+          "bentrm": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "benate": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fdg": {
+            "type": "string",
+            "nullable": true
+          },
+          "hdg": {
+            "type": "string",
+            "nullable": true
+          },
+          "benudg": {
+            "type": "string",
+            "nullable": true
+          },
+          "parentescoDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "situacionDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "terminacionDesc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CausanteRequestDto": {
         "type": "object",
         "properties": {

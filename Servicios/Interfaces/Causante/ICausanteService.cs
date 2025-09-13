@@ -8,8 +8,11 @@ namespace Servicios.Interfaces.Causante
         bool CrearCausante(CausanteRequestDto dto);
         //Actualizar
         bool ActualizarCausante(int id, CausanteRequestDto dto);
+
         //Obtener todos
-        List<CausanteResponseDto> ObtenerCausantes();
+        // Antes: List<CausanteResponseDto> ObtenerCausantes();
+        // Ahora acepta filtro opcional:
+        List<CausanteResponseDto> ObtenerCausantes(string? q = null);
         //Obtener solo por ID
         CausanteRequestDto ObtenerCausantePorId(int id);
         //Eliminar

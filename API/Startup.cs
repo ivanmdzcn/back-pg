@@ -8,6 +8,9 @@ using Servicios.Servicios.Causante;
 using Servicios.Servicios.Login;
 using System.Text;
 using AccesoDatos.Causante;   // 👈 para registrar CausanteDao
+using AccesoDatos.Beneficiario;          // 👈 DAO de beneficiarios
+using Servicios.Interfaces.Beneficiario; // 👈 interfaz
+using Servicios.Servicios.Beneficiario;  // 👈 servicio
 
 
 namespace API
@@ -35,6 +38,10 @@ namespace API
             services.AddTransient<ConexionOracle>();
             services.AddScoped<CausanteDao>();
             services.AddScoped<ICausanteService, CausanteService>();
+
+            // === Beneficiarios ===
+            services.AddScoped<BeneficiarioDao>();
+            services.AddScoped<IBeneficiarioService, BeneficiarioService>();
 
             services.AddControllers();
 

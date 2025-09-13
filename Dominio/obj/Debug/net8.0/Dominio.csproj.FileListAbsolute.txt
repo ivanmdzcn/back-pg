@@ -9,3 +9,4 @@ D:\05-PROYECTO-II\BACK\Dominio\obj\Debug\net8.0\Dominio.dll
 D:\05-PROYECTO-II\BACK\Dominio\obj\Debug\net8.0\refint\Dominio.dll
 D:\05-PROYECTO-II\BACK\Dominio\obj\Debug\net8.0\Dominio.pdb
 D:\05-PROYECTO-II\BACK\Dominio\obj\Debug\net8.0\ref\Dominio.dll
+D:\05-PROYECTO-II\BACK\Dominio\obj\Debug\net8.0\Dominio.sourcelink.json

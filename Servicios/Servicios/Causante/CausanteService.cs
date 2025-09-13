@@ -19,10 +19,10 @@ namespace Servicios.Servicios.Causante
             return _dao.InsertarCausante(dto);
         }
 
-        //Obtener todos
-        public List<CausanteResponseDto> ObtenerCausantes()
+        //Obtener todos  (con búsqueda opcional)
+        public List<CausanteResponseDto> ObtenerCausantes(string? q = null)
         {
-            return _dao.ListarCausantes();
+            return _dao.ListarCausantes(q);
         }
 
         //ACtualizar

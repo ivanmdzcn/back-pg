@@ -48,28 +48,64 @@ namespace AccesoDatos.Causante
         }
 
         //Obtener todos
-        public List<CausanteResponseDto> ListarCausantes()
+        // Antes: ListarCausantes() sin filtro
+        // Ahora: filtro opcional por afiliación, nombre completo o código (caso)
+        public List<CausanteResponseDto> ListarCausantes(string? q = null)
         {
             var lista = new List<CausanteResponseDto>();
-
             using var conn = _conexion.ObtenerConexion();
             conn.Open();
+
             var cmd = conn.CreateCommand();
-            cmd.CommandText =@"
-               SELECT CAUCOD, CAUAFI, CAUNOC, CAUSTS, TO_CHAR(CAUFDG, 'DD-MM-YYYY') AS CAUFDG_FMT  
-               FROM CAUSANTE";
+
+            //Query base 
+            var sql = @"
+                SELECT CAUCOD, CAUAFI, CAUNOC, CAUSTS,
+                       TO_CHAR(CAUFDG, 'DD-MM-YYYY') AS CAUFDG_FMT
+                FROM   CAUSANTE
+                WHERE  1=1";
+
+
+            // WHERE dinámico si viene 'q'
+            if (!string.IsNullOrWhiteSpace(q))
+            {
+                // Si q es numérico => coincidencia EXACTA por CAUCOD
+                if (int.TryParse(q.Trim(), out var qNum))
+                {
+                    sql += " AND CAUCOD = :qNum";
+                    var pNum = new OracleParameter("qNum", OracleDbType.Int32) { Value = qNum };
+                    cmd.Parameters.Add(pNum);
+                }
+                else
+                {
+                    // Si q NO es numérico => búsqueda amplia (nombre contiene, afi/caso por prefijo)
+                    sql += @"
+           AND (
+                UPPER(CAUNOC)    LIKE UPPER(:qLike)
+             OR CAUAFI          LIKE :qPrefix
+             OR TO_CHAR(CAUCOD) LIKE :qPrefix
+           )";
+                    cmd.Parameters.Add(new OracleParameter("qLike", $"%{q}%"));
+                    cmd.Parameters.Add(new OracleParameter("qPrefix", $"{q}%"));
+                }
+            }
+
+            sql += " ORDER BY CAUCOD"; // orden consistente
+
+            cmd.CommandText = sql;
 
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                lista.Add(new CausanteResponseDto
+                var item = new CausanteResponseDto
                 {
                     Codigo = Convert.ToInt32(reader["CAUCOD"]),
-                    Afi = reader["CAUAFI"].ToString(),
-                    NombreCompleto = reader["CAUNOC"].ToString(),
-                    Estado = reader["CAUSTS"].ToString(),
-                    FechaRegistro = reader["CAUFDG_FMT"].ToString()
-                });
+                    Afi = reader["CAUAFI"]?.ToString() ?? "",
+                    NombreCompleto = reader["CAUNOC"]?.ToString() ?? "",
+                    Estado = reader["CAUSTS"]?.ToString() ?? "",
+                    FechaRegistro = reader["CAUFDG_FMT"]?.ToString() ?? ""
+                };
+                lista.Add(item);
             }
             return lista;
         }//Fin obtener
@@ -142,7 +178,6 @@ namespace AccesoDatos.Causante
                     Usuario = reader["CAUUDG"].ToString()
                 };
             }
-
             return null;
         }//Fin obtener por ID
 

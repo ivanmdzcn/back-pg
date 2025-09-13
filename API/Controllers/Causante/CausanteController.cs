@@ -27,9 +27,9 @@ namespace API.Controllers.Causante
 
         //Obtener Todos
         [HttpGet]
-        public IActionResult Listar()
+        public IActionResult Listar([FromQuery] string? q)
         {
-            var lista = _service.ObtenerCausantes();
+            var lista = _service.ObtenerCausantes(q);
             return Ok(lista);
         }
 

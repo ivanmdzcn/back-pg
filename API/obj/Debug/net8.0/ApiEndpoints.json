@@ -1,5 +1,125 @@
 [
   {
+    "ContainingType": "API.Controllers.Beneficiario.BeneficiarioController",
+    "Method": "GetByCausante",
+    "RelativePath": "api/Beneficiario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "causanteId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dominio.DTO.Beneficiario.BeneficiarioResponseDto, Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Controllers.Beneficiario.BeneficiarioController",
+    "Method": "Crear",
+    "RelativePath": "api/Beneficiario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dominio.DTO.Beneficiario.BeneficiarioRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Beneficiario.BeneficiarioController",
+    "Method": "GetOne",
+    "RelativePath": "api/Beneficiario/{bencau}/{bencod}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bencau",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "bencod",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dominio.DTO.Beneficiario.BeneficiarioEditDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Controllers.Beneficiario.BeneficiarioController",
+    "Method": "Actualizar",
+    "RelativePath": "api/Beneficiario/{bencau}/{bencod}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bencau",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "bencod",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Dominio.DTO.Beneficiario.BeneficiarioEditDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Beneficiario.BeneficiarioController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Beneficiario/{bencau}/{bencod}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bencau",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "bencod",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.Causante.CausanteController",
     "Method": "Crear",
     "RelativePath": "api/Causante",
@@ -22,7 +142,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "q",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
