@@ -1,16 +1,21 @@
-﻿using AccesoDatos.Conexion;
+﻿using AccesoDatos.Beneficiario;          // 👈 DAO de beneficiarios
+using AccesoDatos.Causante;   // 👈 para registrar CausanteDao
+using AccesoDatos.Conexion;
+//Nomina
+using AccesoDatos.Nomina;
 using AccesoDatos.Usuario;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Servicios.Interfaces.Beneficiario; // 👈 interfaz
 using Servicios.Interfaces.Causante;
 using Servicios.Interfaces.Login;
+using Servicios.Interfaces.Nomina;
+using Servicios.Servicios.Beneficiario;  // 👈 servicio
 using Servicios.Servicios.Causante;
 using Servicios.Servicios.Login;
+using Servicios.Servicios.Nomina;
+using System.Security.Claims;
 using System.Text;
-using AccesoDatos.Causante;   // 👈 para registrar CausanteDao
-using AccesoDatos.Beneficiario;          // 👈 DAO de beneficiarios
-using Servicios.Interfaces.Beneficiario; // 👈 interfaz
-using Servicios.Servicios.Beneficiario;  // 👈 servicio
 
 
 namespace API
@@ -42,6 +47,10 @@ namespace API
             // === Beneficiarios ===
             services.AddScoped<BeneficiarioDao>();
             services.AddScoped<IBeneficiarioService, BeneficiarioService>();
+
+            // === Nomina ===
+            services.AddScoped<NominaDao>();
+            services.AddScoped<INominaService, NominaService>();
 
             services.AddControllers();
 
@@ -113,7 +122,10 @@ namespace API
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = jwtSettings["Issuer"],
                     ValidAudience = jwtSettings["Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    // Nuevos 
+                    NameClaimType = ClaimTypes.Name,
+                    RoleClaimType = ClaimTypes.Role
                 };
             });
 

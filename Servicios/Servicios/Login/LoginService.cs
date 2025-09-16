@@ -29,10 +29,10 @@ namespace Servicios.Servicios.Login
 
             // Consulta que une usuario con el nombre del rol
             command.CommandText = @"
-                SELECT u.USRCOD, u.USRCON, r.NOMROL
-                FROM USUARIO u
-                JOIN ROL r ON u.USRROL = r.CODROL
-                WHERE u.USRCOD = :usuario";
+            SELECT u.USRCOD, u.USRCON, r.CODROL, r.NOMROL
+            FROM USUARIO u
+            JOIN ROL r ON u.USRROL = r.CODROL
+            WHERE u.USRCOD = :usuario";
 
             command.Parameters.Add(new OracleParameter("usuario", request.Usuario));
 
@@ -44,7 +44,27 @@ namespace Servicios.Servicios.Login
             {
                 string usuario = reader.GetString(0);   // USRCOD
                 string hashGuardado = reader.GetString(1); //Contraseña hash
+                int codRol = reader.GetInt32(2);   // CODROL -> 1, 2, ...
                 string rolNombre = reader.GetString(2);      // NOMROL (ej: Administrador)
+
+                // Mapea por ID (estable).
+                string rolCodigo = codRol switch
+                {
+                    1 => "ADMIN",
+                    2 => "OPERADOR",
+                    // 3 => "ANALISTA",
+                    _ => "DESCONOCIDO"
+                };
+                //// 👇 NUEVO: normaliza nombre -> código
+                //var mapaRoles = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+                //{
+                //    { "Administrador", "ADMIN" },
+                //    { "Operador", "OPERADOR" },
+                //    { "Analista de Nómina", "ANALISTA" }
+                //};
+                // fallback por si aparece otro
+                //string rolCodigo = mapaRoles.TryGetValue(rolNombre, out var cod)? cod: rolNombre.ToUpperInvariant(); 
+                
 
                 // Comparar la contraseña ingresada con el hash usando BCrypt
                 bool contrasenaValida = BCrypt.Net.BCrypt.Verify(request.Contrasena, hashGuardado);
@@ -67,7 +87,13 @@ namespace Servicios.Servicios.Login
                         new Claim(ClaimTypes.Name, usuario),                    // name (ASP.NET)
                         new Claim(JwtRegisteredClaimNames.UniqueName, usuario), // unique_name (estándar)
                         new Claim("usuario", usuario),                          // custom corto para el front
-                        new Claim(ClaimTypes.Role, rolNombre)                   // rol por nombre (p.ej. Administrador)
+
+                        // 👇 para [Authorize(Roles="ADMIN")] etc.
+                        new Claim(ClaimTypes.Role, rolCodigo),
+
+                        // 👇 opcionales, útiles para mostrar en UI
+                        new Claim("rolCodigo", rolCodigo),
+                         new Claim("rolNombre", rolNombre)
 
                     }),
                     Expires = DateTime.UtcNow.AddHours(1),

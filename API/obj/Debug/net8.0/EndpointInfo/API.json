@@ -411,6 +411,213 @@
         }
       }
     },
+    "/api/Nomina": {
+      "get": {
+        "tags": [
+          "Nomina"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NominaHdrDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NominaHdrDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NominaHdrDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Nomina"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NominaCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NominaCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NominaCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Nomina/{id}": {
+      "get": {
+        "tags": [
+          "Nomina"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NominaDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NominaDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NominaDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Nomina/{id}/autorizar": {
+      "post": {
+        "tags": [
+          "Nomina"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Nomina/{id}/cancelar": {
+      "post": {
+        "tags": [
+          "Nomina"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Nomina/{id}/fechas": {
+      "put": {
+        "tags": [
+          "Nomina"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NominaCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NominaCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NominaCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Nomina/whoami": {
+      "get": {
+        "tags": [
+          "Nomina"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Usuario/usuarios": {
       "get": {
         "tags": [
@@ -694,6 +901,158 @@
           "contrasena": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NominaCreateDto": {
+        "type": "object",
+        "properties": {
+          "nomtip": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomfdi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nomfdf": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NominaDetalleDto": {
+        "type": "object",
+        "properties": {
+          "detcod": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detcau": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detben": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detmon": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NominaDto": {
+        "type": "object",
+        "properties": {
+          "nomcod": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomtip": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomstd": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomfdi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nomfdf": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nomudc": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomuda": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomfau": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "detalle": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NominaDetalleDto"
+            },
+            "nullable": true
+          },
+          "permisos": {
+            "$ref": "#/components/schemas/NominaPermisos"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NominaHdrDto": {
+        "type": "object",
+        "properties": {
+          "nomcod": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomtip": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomstd": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomfdi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nomfdf": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nomudc": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomuda": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomfau": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NominaPermisos": {
+        "type": "object",
+        "properties": {
+          "puedeVer": {
+            "type": "boolean"
+          },
+          "puedeEditarEncabezado": {
+            "type": "boolean"
+          },
+          "puedeAgregarDetalle": {
+            "type": "boolean"
+          },
+          "puedeEliminarDetalle": {
+            "type": "boolean"
+          },
+          "puedeAutorizar": {
+            "type": "boolean"
+          },
+          "puedeCancelar": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
