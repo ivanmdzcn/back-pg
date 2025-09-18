@@ -3,26 +3,8 @@
   "WorkspaceRootPath": "D:\\05-PROYECTO-II\\BACK\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65A89728-03FE-4778-8D3F-EB20C6C152B2}|..\\AccesoDatos\\AccesoDatos.csproj|d:\\05-proyecto-ii\\back\\accesodatos\\nomina\\nominadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\nomina\\nominacreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\nomina\\nominahdrdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\servicios\\nomina\\nominaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\nomina\\nominadetalledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\controllers\\nomina\\nominacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:controllers\\nomina\\nominacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\interfaces\\nomina\\inominaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\controllers\\nomina\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:controllers\\nomina\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,93 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NominaController.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Nomina\\NominaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Nomina\\NominaController.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Nomina\\NominaController.cs",
-              "RelativeToolTip": "Controllers\\Nomina\\NominaController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAcwBkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:14:14.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "INominaService.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Nomina\\INominaService.cs",
-              "RelativeDocumentMoniker": "..\\Servicios\\Interfaces\\Nomina\\INominaService.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Nomina\\INominaService.cs",
-              "RelativeToolTip": "..\\Servicios\\Interfaces\\Nomina\\INominaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:13:14.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NominaDao.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Nomina\\NominaDao.cs",
-              "RelativeDocumentMoniker": "..\\AccesoDatos\\Nomina\\NominaDao.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Nomina\\NominaDao.cs",
-              "RelativeToolTip": "..\\AccesoDatos\\Nomina\\NominaDao.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAuwKsAAAAAAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Nomina\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Nomina\\AuthController.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Nomina\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\Nomina\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:10:55.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NominaCreateDto.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Nomina\\NominaCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Nomina\\NominaCreateDto.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Nomina\\NominaCreateDto.cs",
-              "RelativeToolTip": "..\\Dominio\\DTO\\Nomina\\NominaCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:09:43.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NominaHdrDto.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Nomina\\NominaHdrDto.cs",
-              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Nomina\\NominaHdrDto.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Nomina\\NominaHdrDto.cs",
-              "RelativeToolTip": "..\\Dominio\\DTO\\Nomina\\NominaHdrDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:09:23.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NominaService.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "RelativeDocumentMoniker": "..\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "RelativeToolTip": "..\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAIwC4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:02:03.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NominaDetalleDto.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Nomina\\NominaDetalleDto.cs",
-              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Nomina\\NominaDetalleDto.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Nomina\\NominaDetalleDto.cs",
-              "RelativeToolTip": "..\\Dominio\\DTO\\Nomina\\NominaDetalleDto.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:00:30.604Z",
+              "WhenOpened": "2025-09-16T06:23:30.418Z",
               "EditorCaption": ""
             }
           ]

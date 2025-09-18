@@ -8,88 +8,64 @@ namespace API.Controllers.Nomina
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize] // requiere JWT
+    [Authorize]
     public class NominaController : ControllerBase
     {
         private readonly INominaService _svc;
         public NominaController(INominaService svc) { _svc = svc; }
 
-        // Helpers para leer usuario/rol del token de forma robusta
         private string GetUsuario() =>
             User?.Identity?.Name ??
             User?.FindFirstValue(ClaimTypes.Name) ??
-            User?.FindFirstValue("unique_name") ??
             "anonimo";
 
-        private string GetRolCodigo()
-        {
-            // Preferimos el claim estándar
-            var rol = User?.FindFirstValue(ClaimTypes.Role)
-                      ?? User?.FindFirstValue("role")
-                      ?? "OPERADOR";
-            return rol.ToUpperInvariant(); // ADMIN | OPERADOR | ANALISTA
-        }
+        private string GetRol() =>
+            (User?.FindFirstValue(ClaimTypes.Role) ?? "OPERADOR").ToUpperInvariant();
 
-        // GET /api/Nomina  (lista: admin/analista todas, operador solo propias)
-        [HttpGet]
-        public ActionResult<List<NominaHdrDto>> Listar()
-        {
-            var usuario = GetUsuario();
-            var rol = GetRolCodigo(); // <- "ADMIN" | "OPERADOR" | "ANALISTA"
+        // ===== Encabezado =====
 
-            var lista = _svc.Listar(usuario, rol);
-            return Ok(lista);
-        }
-
-        // POST /api/Nomina  (crea borrador)
         [HttpPost]
         public IActionResult Crear([FromBody] NominaCreateDto dto)
         {
             if (dto == null) return BadRequest(new { mensaje = "Body requerido" });
             if (dto.Nomfdf < dto.Nomfdi) return BadRequest(new { mensaje = "Rango de fechas inválido" });
 
-            var usuario = GetUsuario();
-            var id = _svc.Crear(dto, usuario);
-
+            var id = _svc.Crear(dto, GetUsuario());
             return Ok(new { nomcod = id, mensaje = "Nómina creada en borrador." });
         }
 
-        // GET /api/Nomina/{id}  (encabezado + permisos)
+        [HttpGet]
+        public ActionResult<List<NominaHdrDto>> Listar()
+        {
+            return Ok(_svc.Listar(GetUsuario(), GetRol()));
+        }
+
         [HttpGet("{id:int}")]
         public ActionResult<NominaDto> Obtener(int id)
         {
-            var usuario = GetUsuario();
-            var rol = GetRolCodigo();
-
-            var dto = _svc.Obtener(id, usuario, rol);
-            if (dto == null) return Forbid(); // o NotFound si prefieres no revelar existencia
-
+            var dto = _svc.Obtener(id, GetUsuario(), GetRol());
+            if (dto == null) return Forbid(); // o NotFound si prefieres ocultar la existencia
             return Ok(dto);
         }
 
-        // POST /api/Nomina/{id}/autorizar  (solo admin)
         [HttpPost("{id:int}/autorizar")]
         [Authorize(Roles = "ADMIN")]
         public IActionResult Autorizar(int id)
         {
-            var usuario = GetUsuario(); // quién autoriza (admin)
-            var ok = _svc.Autorizar(id, usuario);
+            var ok = _svc.Autorizar(id, GetUsuario());
             if (!ok) return BadRequest(new { mensaje = "Solo se autoriza una nómina en estado Borrador." });
             return Ok(new { mensaje = "Nómina autorizada." });
         }
 
-        // POST /api/Nomina/{id}/cancelar  (solo admin)
         [HttpPost("{id:int}/cancelar")]
         [Authorize(Roles = "ADMIN")]
         public IActionResult Cancelar(int id)
         {
-            var usuario = GetUsuario(); // quién cancela (admin)
-            var ok = _svc.Cancelar(id, usuario);
+            var ok = _svc.Cancelar(id, GetUsuario());
             if (!ok) return BadRequest(new { mensaje = "No se pudo cancelar (estado inválido)." });
             return Ok(new { mensaje = "Nómina cancelada." });
         }
 
-        // PUT /api/Nomina/{id}/fechas (editar rango SOLO en B)
         [HttpPut("{id:int}/fechas")]
         public IActionResult ActualizarFechas(int id, [FromBody] NominaCreateDto dto)
         {
@@ -101,15 +77,45 @@ namespace API.Controllers.Nomina
             return Ok(new { mensaje = "Fechas actualizadas." });
         }
 
-        // (opcional) Endpoint de diagnóstico para ver qué llega en el token
-        [HttpGet("whoami")]
-        public IActionResult WhoAmI()
+        // ===== Detalle =====
+
+        // ✅ Ahora valida permisos reutilizando Obtener(...)
+        [HttpGet("{id:int}/detalle")]
+        public ActionResult<List<NominaDetalleDto>> ListarDetalle(int id)
         {
-            return Ok(new
-            {
-                name = GetUsuario(),
-                rol = GetRolCodigo()
-            });
+            var nomina = _svc.Obtener(id, GetUsuario(), GetRol());
+            if (nomina == null || !nomina.Permisos.PuedeVer) return Forbid();
+            return Ok(nomina.Detalle);
+        }
+
+        [HttpPost("{id:int}/detalle")]
+        public IActionResult AgregarDetalle(int id, [FromBody] NominaDetalleDto dto)
+        {
+            if (dto == null || dto.Detcau <= 0 || dto.Detben <= 0 || dto.Detmon <= 0)
+                return BadRequest(new { mensaje = "Datos inválidos" });
+
+            var ok = _svc.AgregarDetalle(id, dto, GetUsuario(), GetRol());
+            if (!ok) return BadRequest(new { mensaje = "No se pudo agregar (permiso o estado inválido)." });
+            return Ok(new { mensaje = "Detalle agregado." });
+        }
+
+        [HttpPut("{id:int}/detalle/{cau:int}/{ben:int}")]
+        public IActionResult ActualizarDetalle(int id, int cau, int ben, [FromBody] NominaDetUpdateDto dto)
+        {
+            if (dto == null || dto.Detmon <= 0)
+                return BadRequest(new { mensaje = "Monto inválido" });
+
+            var ok = _svc.ActualizarDetalle(id, cau, ben, dto.Detmon, GetUsuario(), GetRol());
+            if (!ok) return BadRequest(new { mensaje = "No se pudo actualizar (permiso o estado inválido)." });
+            return Ok(new { mensaje = "Detalle actualizado." });
+        }
+
+        [HttpDelete("{id:int}/detalle/{cau:int}/{ben:int}")]
+        public IActionResult EliminarDetalle(int id, int cau, int ben)
+        {
+            var ok = _svc.EliminarDetalle(id, cau, ben, GetUsuario(), GetRol());
+            if (!ok) return BadRequest(new { mensaje = "No se pudo eliminar (permiso o estado inválido)." });
+            return Ok(new { mensaje = "Detalle eliminado." });
         }
     }
 }

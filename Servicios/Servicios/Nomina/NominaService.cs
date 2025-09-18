@@ -9,6 +9,7 @@ namespace Servicios.Servicios.Nomina
         private readonly NominaDao _dao;
         public NominaService(NominaDao dao) { _dao = dao; }
 
+        // ===== Encabezado =====
         public int Crear(NominaCreateDto dto, string usuario) => _dao.Crear(dto, usuario);
 
         public List<NominaHdrDto> Listar(string usuario, string rol)
@@ -16,7 +17,6 @@ namespace Servicios.Servicios.Nomina
             bool esAdmin = string.Equals(rol, "ADMIN", StringComparison.OrdinalIgnoreCase);
             bool esAnalista = string.Equals(rol, "ANALISTA", StringComparison.OrdinalIgnoreCase);
 
-            // Admin y Analista ven TODO; Operador solo sus propias nóminas
             return _dao.Listar(usuario, esAdmin || esAnalista);
         }
 
@@ -29,20 +29,20 @@ namespace Servicios.Servicios.Nomina
             bool esAnalista = string.Equals(rol, "ANALISTA", StringComparison.OrdinalIgnoreCase);
             bool esDueno = string.Equals(hdr.Nomudc, usuario, StringComparison.OrdinalIgnoreCase);
 
+            var puedeVer = esAdmin || esAnalista || esDueno;
+            if (!puedeVer) return null;
+
             var permisos = new NominaPermisos
             {
-                // Analista puede ver todo; Admin también; Operador solo si es dueño
-                PuedeVer = esAdmin || esAnalista || esDueno,
-
-                // Editar encabezado solo en borrador y si es Admin o Dueño (Analista NO edita)
+                PuedeVer = true,
                 PuedeEditarEncabezado = hdr.Nomstd == "B" && (esAdmin || esDueno),
-
-                // Autorizar / Cancelar: solo Admin (con las reglas de estado)
                 PuedeAutorizar = hdr.Nomstd == "B" && esAdmin,
-                PuedeCancelar = (hdr.Nomstd == "B" || hdr.Nomstd == "A") && esAdmin
+                PuedeCancelar = (hdr.Nomstd == "B" || hdr.Nomstd == "A") && esAdmin,
+                PuedeAgregarDetalle = hdr.Nomstd == "B" && (esAdmin || esDueno),
+                PuedeEliminarDetalle = hdr.Nomstd == "B" && (esAdmin || esDueno)
             };
 
-            if (!permisos.PuedeVer) return null;
+            var det = _dao.ListarDetalle(nomcod);
 
             return new NominaDto
             {
@@ -54,6 +54,7 @@ namespace Servicios.Servicios.Nomina
                 Nomudc = hdr.Nomudc,
                 Nomuda = hdr.Nomuda,
                 Nomfau = hdr.Nomfau,
+                Detalle = det,
                 Permisos = permisos
             };
         }
@@ -61,5 +62,45 @@ namespace Servicios.Servicios.Nomina
         public bool Autorizar(int nomcod, string usuarioAdmin) => _dao.Autorizar(nomcod, usuarioAdmin);
         public bool Cancelar(int nomcod, string usuarioAdmin) => _dao.Cancelar(nomcod, usuarioAdmin);
         public bool ActualizarFechas(int nomcod, DateTime fdi, DateTime fdf) => _dao.ActualizarFechas(nomcod, fdi, fdf);
+
+        // ===== Detalle =====
+        public List<NominaDetalleDto> ListarDetalle(int nomcod) => _dao.ListarDetalle(nomcod);
+
+        // 🔧 Ajustado: usa NominaDetalleDto y pasa campos al DAO
+        public bool AgregarDetalle(int nomcod, NominaDetalleDto dto, string usuario, string rol)
+        {
+            var hdr = _dao.ObtenerHdr(nomcod);
+            if (hdr == null) return false;
+
+            bool esAdmin = string.Equals(rol, "ADMIN", StringComparison.OrdinalIgnoreCase);
+            bool esDueno = string.Equals(hdr.Nomudc, usuario, StringComparison.OrdinalIgnoreCase);
+            if (!(esAdmin || esDueno)) return false;
+
+            return _dao.AgregarDetalle(nomcod, dto.Detcau, dto.Detben, dto.Detmon);
+        }
+
+        public bool ActualizarDetalle(int nomcod, int cau, int ben, decimal monto, string usuario, string rol)
+        {
+            var hdr = _dao.ObtenerHdr(nomcod);
+            if (hdr == null) return false;
+
+            bool esAdmin = string.Equals(rol, "ADMIN", StringComparison.OrdinalIgnoreCase);
+            bool esDueno = string.Equals(hdr.Nomudc, usuario, StringComparison.OrdinalIgnoreCase);
+            if (!(esAdmin || esDueno)) return false;
+
+            return _dao.ActualizarDetalle(nomcod, cau, ben, monto);
+        }
+
+        public bool EliminarDetalle(int nomcod, int cau, int ben, string usuario, string rol)
+        {
+            var hdr = _dao.ObtenerHdr(nomcod);
+            if (hdr == null) return false;
+
+            bool esAdmin = string.Equals(rol, "ADMIN", StringComparison.OrdinalIgnoreCase);
+            bool esDueno = string.Equals(hdr.Nomudc, usuario, StringComparison.OrdinalIgnoreCase);
+            if (!(esAdmin || esDueno)) return false;
+
+            return _dao.EliminarDetalle(nomcod, cau, ben);
+        }
     }
 }

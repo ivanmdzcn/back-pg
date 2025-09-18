@@ -1,6 +1,6 @@
 ﻿namespace Dominio.DTO.Nomina
 {
-    public class NominaHdrDto
+    public class NominaDto
     {
         public int Nomcod { get; set; }
         public string Nomtip { get; set; } = "";
@@ -10,5 +10,8 @@
         public string Nomudc { get; set; } = "";
         public string? Nomuda { get; set; }
         public DateTime? Nomfau { get; set; }
+
+        public List<NominaDetalleDto> Detalle { get; set; } = new();
+        public NominaPermisos Permisos { get; set; } = new();
     }
 }

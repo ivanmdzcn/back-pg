@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "API.Controllers.AuthController",
+    "Method": "WhoAmI",
+    "RelativePath": "api/Auth/whoami",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.Beneficiario.BeneficiarioController",
     "Method": "GetByCausante",
     "RelativePath": "api/Beneficiario",
@@ -232,6 +242,22 @@
   },
   {
     "ContainingType": "API.Controllers.Nomina.NominaController",
+    "Method": "Crear",
+    "RelativePath": "api/Nomina",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dominio.DTO.Nomina.NominaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Nomina.NominaController",
     "Method": "Listar",
     "RelativePath": "api/Nomina",
     "HttpMethod": "GET",
@@ -252,22 +278,6 @@
   },
   {
     "ContainingType": "API.Controllers.Nomina.NominaController",
-    "Method": "Crear",
-    "RelativePath": "api/Nomina",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "Dominio.DTO.Nomina.NominaCreateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API.Controllers.Nomina.NominaController",
     "Method": "Obtener",
     "RelativePath": "api/Nomina/{id}",
     "HttpMethod": "GET",
@@ -282,7 +292,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "NominaDto",
+        "Type": "Dominio.DTO.Nomina.NominaDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -326,6 +336,110 @@
   },
   {
     "ContainingType": "API.Controllers.Nomina.NominaController",
+    "Method": "ListarDetalle",
+    "RelativePath": "api/Nomina/{id}/detalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dominio.DTO.Nomina.NominaDetalleDto, Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Controllers.Nomina.NominaController",
+    "Method": "AgregarDetalle",
+    "RelativePath": "api/Nomina/{id}/detalle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Dominio.DTO.Nomina.NominaDetalleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Nomina.NominaController",
+    "Method": "ActualizarDetalle",
+    "RelativePath": "api/Nomina/{id}/detalle/{cau}/{ben}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cau",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ben",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Dominio.DTO.Nomina.NominaDetUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Nomina.NominaController",
+    "Method": "EliminarDetalle",
+    "RelativePath": "api/Nomina/{id}/detalle/{cau}/{ben}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cau",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ben",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Nomina.NominaController",
     "Method": "ActualizarFechas",
     "RelativePath": "api/Nomina/{id}/fechas",
     "HttpMethod": "PUT",
@@ -343,16 +457,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API.Controllers.Nomina.NominaController",
-    "Method": "WhoAmI",
-    "RelativePath": "api/Nomina/whoami",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
