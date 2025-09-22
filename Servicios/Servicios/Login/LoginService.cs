@@ -55,16 +55,6 @@ namespace Servicios.Servicios.Login
                     // 3 => "ANALISTA",
                     _ => "DESCONOCIDO"
                 };
-                //// 👇 NUEVO: normaliza nombre -> código
-                //var mapaRoles = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-                //{
-                //    { "Administrador", "ADMIN" },
-                //    { "Operador", "OPERADOR" },
-                //    { "Analista de Nómina", "ANALISTA" }
-                //};
-                // fallback por si aparece otro
-                //string rolCodigo = mapaRoles.TryGetValue(rolNombre, out var cod)? cod: rolNombre.ToUpperInvariant(); 
-                
 
                 // Comparar la contraseña ingresada con el hash usando BCrypt
                 bool contrasenaValida = BCrypt.Net.BCrypt.Verify(request.Contrasena, hashGuardado);

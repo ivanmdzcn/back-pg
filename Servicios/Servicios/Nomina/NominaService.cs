@@ -66,7 +66,7 @@ namespace Servicios.Servicios.Nomina
         // ===== Detalle =====
         public List<NominaDetalleDto> ListarDetalle(int nomcod) => _dao.ListarDetalle(nomcod);
 
-        // 🔧 Ajustado: usa NominaDetalleDto y pasa campos al DAO
+        // Ajustado: usa NominaDetalleDto y pasa campos al DAO
         public bool AgregarDetalle(int nomcod, NominaDetalleDto dto, string usuario, string rol)
         {
             var hdr = _dao.ObtenerHdr(nomcod);

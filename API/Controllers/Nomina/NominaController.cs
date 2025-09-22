@@ -44,7 +44,7 @@ namespace API.Controllers.Nomina
         public ActionResult<NominaDto> Obtener(int id)
         {
             var dto = _svc.Obtener(id, GetUsuario(), GetRol());
-            if (dto == null) return Forbid(); // o NotFound si prefieres ocultar la existencia
+            if (dto == null) return Forbid(); // o NotFound si se quiere ocultar la existencia
             return Ok(dto);
         }
 
