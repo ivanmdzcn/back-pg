@@ -3,7 +3,32 @@
   "WorkspaceRootPath": "D:\\05-PROYECTO-II\\BACK\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\servicios\\nomina\\nominaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\servicios\\reportes\\reportpdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\servicios\\reportes\\reportesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33B76C86-1FF4-43A8-BF0B-71DDECF2F66A}|..\\Servicios\\Servicios.csproj|d:\\05-proyecto-ii\\back\\servicios\\interfaces\\reportes\\ireportesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\reportes\\reportenominahdrdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\reportes\\nominaresumendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\reportes\\nominadetallereportedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{106E0BA6-6018-4AE1-8D77-589748113448}|..\\Dominio\\Dominio.csproj|d:\\05-proyecto-ii\\back\\dominio\\dto\\reportes\\nominadetallelineadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|d:\\05-proyecto-ii\\back\\api\\controllers\\reportes\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CBBACC-B6DE-4A3E-8D74-06F3EAC48F47}|API.csproj|solutionrelative:controllers\\reportes\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65A89728-03FE-4778-8D3F-EB20C6C152B2}|..\\AccesoDatos\\AccesoDatos.csproj|d:\\05-proyecto-ii\\back\\accesodatos\\reportes\\reportesdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -21,15 +46,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NominaService.cs",
-              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "RelativeDocumentMoniker": "..\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "RelativeToolTip": "..\\Servicios\\Servicios\\Nomina\\NominaService.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAkwEQAAAALAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ReportesService.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Reportes\\ReportesService.cs",
+              "RelativeDocumentMoniker": "..\\Servicios\\Servicios\\Reportes\\ReportesService.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Reportes\\ReportesService.cs",
+              "RelativeToolTip": "..\\Servicios\\Servicios\\Reportes\\ReportesService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T02:32:45.935Z",
+              "WhenOpened": "2025-09-23T06:19:41.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IReportesService.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Reportes\\IReportesService.cs",
+              "RelativeDocumentMoniker": "..\\Servicios\\Interfaces\\Reportes\\IReportesService.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Interfaces\\Reportes\\IReportesService.cs",
+              "RelativeToolTip": "..\\Servicios\\Interfaces\\Reportes\\IReportesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:19:37.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReporteNominaHdrDto.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\ReporteNominaHdrDto.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Reportes\\ReporteNominaHdrDto.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\ReporteNominaHdrDto.cs",
+              "RelativeToolTip": "..\\Dominio\\DTO\\Reportes\\ReporteNominaHdrDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:19:30.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NominaResumenDto.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\NominaResumenDto.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Reportes\\NominaResumenDto.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\NominaResumenDto.cs",
+              "RelativeToolTip": "..\\Dominio\\DTO\\Reportes\\NominaResumenDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:19:29.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NominaDetalleReporteDto.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\NominaDetalleReporteDto.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Reportes\\NominaDetalleReporteDto.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\NominaDetalleReporteDto.cs",
+              "RelativeToolTip": "..\\Dominio\\DTO\\Reportes\\NominaDetalleReporteDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:19:27.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NominaDetalleLineaDto.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\NominaDetalleLineaDto.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\DTO\\Reportes\\NominaDetalleLineaDto.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Dominio\\DTO\\Reportes\\NominaDetalleLineaDto.cs",
+              "RelativeToolTip": "..\\Dominio\\DTO\\Reportes\\NominaDetalleLineaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:19:24.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReportesController.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Reportes\\ReportesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Reportes\\ReportesController.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\API\\Controllers\\Reportes\\ReportesController.cs",
+              "RelativeToolTip": "Controllers\\Reportes\\ReportesController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAmwE0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:18:01.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportPdfService.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Reportes\\ReportPdfService.cs",
+              "RelativeDocumentMoniker": "..\\Servicios\\Servicios\\Reportes\\ReportPdfService.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\Servicios\\Servicios\\Reportes\\ReportPdfService.cs",
+              "RelativeToolTip": "..\\Servicios\\Servicios\\Reportes\\ReportPdfService.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAgwGsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T05:42:58.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportesDao.cs",
+              "DocumentMoniker": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Reportes\\ReportesDao.cs",
+              "RelativeDocumentMoniker": "..\\AccesoDatos\\Reportes\\ReportesDao.cs",
+              "ToolTip": "D:\\05-PROYECTO-II\\BACK\\AccesoDatos\\Reportes\\ReportesDao.cs",
+              "RelativeToolTip": "..\\AccesoDatos\\Reportes\\ReportesDao.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAIwIsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:17:37.334Z",
               "EditorCaption": ""
             }
           ]

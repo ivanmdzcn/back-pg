@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T219FaAHqxI=",
+  "dgSpecHash": "qeK9G9lN0nI=",
   "success": true,
   "projectFilePath": "D:\\05-PROYECTO-II\\BACK\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\ivan\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\ivan\\.nuget\\packages\\oracle.manageddataaccess\\23.9.1\\oracle.manageddataaccess.23.9.1.nupkg.sha512",
     "C:\\Users\\ivan\\.nuget\\packages\\oracle.manageddataaccess.core\\23.9.1\\oracle.manageddataaccess.core.23.9.1.nupkg.sha512",
+    "C:\\Users\\ivan\\.nuget\\packages\\questpdf\\2025.7.1\\questpdf.2025.7.1.nupkg.sha512",
     "C:\\Users\\ivan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\ivan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\ivan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

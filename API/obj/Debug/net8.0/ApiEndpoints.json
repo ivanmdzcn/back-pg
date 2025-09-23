@@ -460,6 +460,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.Reportes.ReportesController",
+    "Method": "DetalleNomina",
+    "RelativePath": "api/Reportes/nomina/{id}/detalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Reportes.ReportesController",
+    "Method": "PdfNomina",
+    "RelativePath": "api/Reportes/nomina/{id}/pdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.Reportes.ReportesController",
+    "Method": "NominasAutorizadas",
+    "RelativePath": "api/Reportes/nominas-autorizadas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.Usuario.UsuarioController",
     "Method": "GetUsuarios",
     "RelativePath": "api/Usuario/usuarios",

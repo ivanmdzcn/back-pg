@@ -16,7 +16,10 @@ using Servicios.Servicios.Login;
 using Servicios.Servicios.Nomina;
 using System.Security.Claims;
 using System.Text;
-
+// === Reportes ===
+using AccesoDatos.Reportes;
+using Servicios.Interfaces.Reportes;
+using Servicios.Servicios.Reportes;
 
 namespace API
 {
@@ -51,6 +54,13 @@ namespace API
             // === Nomina ===
             services.AddScoped<NominaDao>();
             services.AddScoped<INominaService, NominaService>();
+
+            // === Reportes ===
+            services.AddScoped<ReportesDao>();
+            services.AddScoped<IReportesService, ReportesService>();
+
+            // PDF
+            services.AddScoped<Servicios.Servicios.Reportes.ReportPdfService>();
 
             services.AddControllers();
 
